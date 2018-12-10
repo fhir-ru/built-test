@@ -1,0 +1,42 @@
+﻿{
+  "types": [
+    "RiskAssessment"
+  ],
+  "RiskAssessment": {
+    "elements": {
+      "RiskAssessment.identifier": {
+        "old-max": "1",
+        "new-max": "*"
+      },
+      "RiskAssessment.subject": {
+        "old-min": 0,
+        "new-min": 1
+      },
+      "RiskAssessment.reasonCode": {
+        "status": "new"
+      },
+      "RiskAssessment.reasonReference": {
+        "status": "new"
+      },
+      "RiskAssessment.prediction.outcome": {
+        "old-min": 1,
+        "new-min": 0
+      },
+      "RiskAssessment.note": {
+        "old-name": "comment",
+        "old-max": "1",
+        "new-max": "*",
+        "removed-types": [
+          "string"
+        ],
+        "added-types": [
+          "Annotation"
+        ]
+      },
+      "RiskAssessment.reason[x]": {
+        "status": "deleted"
+      }
+    },
+    "status": "changed"
+  }
+}

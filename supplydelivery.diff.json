@@ -1,0 +1,42 @@
+﻿{
+  "types": [
+    "SupplyDelivery"
+  ],
+  "SupplyDelivery": {
+    "elements": {
+      "SupplyDelivery.identifier": {
+        "old-max": "1",
+        "new-max": "*"
+      },
+      "SupplyDelivery.type": {
+        "binding-codes-changed": true,
+        "removed-codes": [
+          "medication",
+          "device"
+        ],
+        "added-codes": [
+          "medication",
+          "device"
+        ],
+        "binding-status": "changed",
+        "old-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/supplydelivery-type",
+          "strength": "required"
+        },
+        "new-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/supplydelivery-type",
+          "strength": "required"
+        }
+      },
+      "SupplyDelivery.supplier": {
+        "removed-types": [
+          "Reference(Practitioner | Organization)"
+        ],
+        "added-types": [
+          "Reference(Practitioner | PractitionerRole | Organization)"
+        ]
+      }
+    },
+    "status": "changed"
+  }
+}

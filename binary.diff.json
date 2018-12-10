@@ -1,0 +1,15 @@
+﻿{
+  "types": [
+    "Binary"
+  ],
+  "Binary": {
+    "elements": {
+      "Binary.data": {
+        "old-name": "content",
+        "old-min": 1,
+        "new-min": 0
+      }
+    },
+    "status": "changed"
+  }
+}

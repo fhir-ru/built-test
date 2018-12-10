@@ -1,0 +1,57 @@
+﻿{
+  "types": [
+    "StructureMap"
+  ],
+  "StructureMap": {
+    "elements": {
+      "StructureMap": {
+        "old-min": 1,
+        "new-min": 0,
+        "old-max": "1",
+        "new-max": "*"
+      },
+      "StructureMap.experimental": {
+        "modifier": "removed"
+      },
+      "StructureMap.structure.url": {
+        "removed-types": [
+          "uri"
+        ],
+        "added-types": [
+          "canonical(StructureDefinition)"
+        ]
+      },
+      "StructureMap.import": {
+        "removed-types": [
+          "uri"
+        ],
+        "added-types": [
+          "canonical(StructureMap)"
+        ]
+      },
+      "StructureMap.group.rule.source.defaultValue[x]": {
+        "removed-types": [
+          "Meta"
+        ],
+        "added-types": [
+          "canonical",
+          "url",
+          "uuid",
+          "ContactDetail",
+          "Contributor",
+          "DataRequirement",
+          "Expression",
+          "ParameterDefinition",
+          "RelatedArtifact",
+          "TriggerDefinition",
+          "UsageContext",
+          "Dosage"
+        ]
+      },
+      "StructureMap.group.rule.source.logMessage": {
+        "status": "new"
+      }
+    },
+    "status": "changed"
+  }
+}

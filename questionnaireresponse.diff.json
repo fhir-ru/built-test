@@ -1,0 +1,46 @@
+﻿{
+  "types": [
+    "QuestionnaireResponse"
+  ],
+  "QuestionnaireResponse": {
+    "elements": {
+      "QuestionnaireResponse.basedOn": {
+        "removed-types": [
+          "Reference(ReferralRequest | CarePlan | ProcedureRequest)"
+        ],
+        "added-types": [
+          "Reference(CarePlan | ServiceRequest)"
+        ]
+      },
+      "QuestionnaireResponse.partOf": {
+        "old-name": "parent"
+      },
+      "QuestionnaireResponse.questionnaire": {
+        "removed-types": [
+          "Reference(Questionnaire)"
+        ],
+        "added-types": [
+          "canonical(Questionnaire)"
+        ]
+      },
+      "QuestionnaireResponse.encounter": {
+        "status": "new"
+      },
+      "QuestionnaireResponse.author": {
+        "removed-types": [
+          "Reference(Device | Practitioner | Patient | RelatedPerson)"
+        ],
+        "added-types": [
+          "Reference(Device | Practitioner | PractitionerRole | Patient | RelatedPerson | Organization)"
+        ]
+      },
+      "QuestionnaireResponse.context": {
+        "status": "deleted"
+      },
+      "QuestionnaireResponse.item.subject": {
+        "status": "deleted"
+      }
+    },
+    "status": "changed"
+  }
+}

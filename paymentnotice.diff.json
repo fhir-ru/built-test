@@ -1,0 +1,50 @@
+﻿{
+  "types": [
+    "PaymentNotice"
+  ],
+  "PaymentNotice": {
+    "elements": {
+      "PaymentNotice.status": {
+        "old-min": 0,
+        "new-min": 1
+      },
+      "PaymentNotice.created": {
+        "old-min": 0,
+        "new-min": 1
+      },
+      "PaymentNotice.provider": {
+        "removed-types": [
+          "Reference(Practitioner)"
+        ],
+        "added-types": [
+          "Reference(Practitioner | PractitionerRole | Organization)"
+        ]
+      },
+      "PaymentNotice.payment": {
+        "status": "new"
+      },
+      "PaymentNotice.paymentDate": {
+        "status": "new"
+      },
+      "PaymentNotice.payee": {
+        "status": "new"
+      },
+      "PaymentNotice.recipient": {
+        "status": "new"
+      },
+      "PaymentNotice.amount": {
+        "status": "new"
+      },
+      "PaymentNotice.statusDate": {
+        "status": "deleted"
+      },
+      "PaymentNotice.target": {
+        "status": "deleted"
+      },
+      "PaymentNotice.organization": {
+        "status": "deleted"
+      }
+    },
+    "status": "changed"
+  }
+}

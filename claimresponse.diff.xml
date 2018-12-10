@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<difference>
+   <type name="ClaimResponse" status="changed">
+      <element new-min="1" old-min="0" path="ClaimResponse.status"/>
+      <element path="ClaimResponse.type" status="new"/>
+      <element path="ClaimResponse.subType" status="new"/>
+      <element path="ClaimResponse.use" status="new"/>
+      <element new-min="1" old-min="0" path="ClaimResponse.patient"/>
+      <element new-min="1" old-min="0" path="ClaimResponse.created"/>
+      <element new-min="1" old-min="0" path="ClaimResponse.insurer"/>
+      <element path="ClaimResponse.requestor" status="new"/>
+      <element binding-status="added"
+               new-min="1"
+               old-min="0"
+               path="ClaimResponse.outcome">
+         <removed-type name="CodeableConcept"/>
+         <added-type name="code"/>
+         <new-binding reference="http://hl7.org/fhir/ValueSet/remittance-outcome"
+                      strength="required"/>
+      </element>
+      <element path="ClaimResponse.preAuthRef" status="new"/>
+      <element path="ClaimResponse.preAuthPeriod" status="new"/>
+      <element path="ClaimResponse.item.itemSequence" status="new"/>
+      <element new-min="1" old-min="0" path="ClaimResponse.item.adjudication"/>
+      <element path="ClaimResponse.item.detail.detailSequence" status="new"/>
+      <element new-min="1"
+               old-min="0"
+               path="ClaimResponse.item.detail.adjudication"/>
+      <element path="ClaimResponse.item.detail.subDetail.subDetailSequence"
+               status="new"/>
+      <element path="ClaimResponse.addItem.itemSequence" status="new"/>
+      <element path="ClaimResponse.addItem.detailSequence" status="new"/>
+      <element path="ClaimResponse.addItem.subdetailSequence" status="new"/>
+      <element path="ClaimResponse.addItem.provider" status="new"/>
+      <element path="ClaimResponse.addItem.productOrService" status="new"/>
+      <element path="ClaimResponse.addItem.programCode" status="new"/>
+      <element path="ClaimResponse.addItem.serviced[x]" status="new"/>
+      <element path="ClaimResponse.addItem.location[x]" status="new"/>
+      <element path="ClaimResponse.addItem.quantity" status="new"/>
+      <element path="ClaimResponse.addItem.unitPrice" status="new"/>
+      <element path="ClaimResponse.addItem.factor" status="new"/>
+      <element path="ClaimResponse.addItem.net" status="new"/>
+      <element path="ClaimResponse.addItem.bodySite" status="new"/>
+      <element path="ClaimResponse.addItem.subSite" status="new"/>
+      <element new-min="1" old-min="0" path="ClaimResponse.addItem.adjudication"/>
+      <element path="ClaimResponse.addItem.detail.productOrService" status="new"/>
+      <element path="ClaimResponse.addItem.detail.quantity" status="new"/>
+      <element path="ClaimResponse.addItem.detail.unitPrice" status="new"/>
+      <element path="ClaimResponse.addItem.detail.factor" status="new"/>
+      <element path="ClaimResponse.addItem.detail.net" status="new"/>
+      <element new-min="1"
+               old-min="0"
+               path="ClaimResponse.addItem.detail.adjudication"/>
+      <element path="ClaimResponse.addItem.detail.subDetail" status="new"/>
+      <element path="ClaimResponse.addItem.detail.subDetail.productOrService"
+               status="new"/>
+      <element path="ClaimResponse.addItem.detail.subDetail.modifier" status="new"/>
+      <element path="ClaimResponse.addItem.detail.subDetail.quantity" status="new"/>
+      <element path="ClaimResponse.addItem.detail.subDetail.unitPrice" status="new"/>
+      <element path="ClaimResponse.addItem.detail.subDetail.factor" status="new"/>
+      <element path="ClaimResponse.addItem.detail.subDetail.net" status="new"/>
+      <element path="ClaimResponse.addItem.detail.subDetail.noteNumber" status="new"/>
+      <element path="ClaimResponse.addItem.detail.subDetail.adjudication" status="new"/>
+      <element path="ClaimResponse.adjudication" status="new"/>
+      <element path="ClaimResponse.total" status="new"/>
+      <element path="ClaimResponse.total.category" status="new"/>
+      <element path="ClaimResponse.total.amount" status="new"/>
+      <element new-min="1" old-min="0" path="ClaimResponse.payment.type"/>
+      <element new-min="1" old-min="0" path="ClaimResponse.payment.amount"/>
+      <element path="ClaimResponse.fundsReserve" status="new"/>
+      <element path="ClaimResponse.formCode" status="new"/>
+      <element path="ClaimResponse.form">
+         <removed-type name="CodeableConcept"/>
+         <added-type name="Attachment"/>
+      </element>
+      <element path="ClaimResponse.processNote.type">
+         <removed-type name="CodeableConcept"/>
+         <added-type name="code"/>
+      </element>
+      <element new-min="1" old-min="0" path="ClaimResponse.processNote.text"/>
+      <element binding-status="changed"
+               binding-strength-changed="true"
+               path="ClaimResponse.processNote.language">
+         <old-binding max="http://hl7.org/fhir/ValueSet/all-languages"
+                      reference="http://hl7.org/fhir/ValueSet/languages"
+                      strength="extensible"/>
+         <new-binding max="http://hl7.org/fhir/ValueSet/all-languages"
+                      reference="http://hl7.org/fhir/ValueSet/languages"
+                      strength="preferred"/>
+      </element>
+      <element path="ClaimResponse.error.itemSequence" status="new"/>
+      <element path="ClaimResponse.error.detailSequence" status="new"/>
+      <element path="ClaimResponse.error.subDetailSequence" status="new"/>
+      <element path="ClaimResponse.requestProvider" status="deleted"/>
+      <element path="ClaimResponse.requestOrganization" status="deleted"/>
+      <element path="ClaimResponse.item.sequenceLinkId" status="deleted"/>
+      <element path="ClaimResponse.item.detail.sequenceLinkId" status="deleted"/>
+      <element path="ClaimResponse.item.detail.subDetail.sequenceLinkId"
+               status="deleted"/>
+      <element path="ClaimResponse.addItem.sequenceLinkId" status="deleted"/>
+      <element path="ClaimResponse.addItem.revenue" status="deleted"/>
+      <element path="ClaimResponse.addItem.category" status="deleted"/>
+      <element path="ClaimResponse.addItem.service" status="deleted"/>
+      <element path="ClaimResponse.addItem.fee" status="deleted"/>
+      <element path="ClaimResponse.addItem.detail.revenue" status="deleted"/>
+      <element path="ClaimResponse.addItem.detail.category" status="deleted"/>
+      <element path="ClaimResponse.addItem.detail.service" status="deleted"/>
+      <element path="ClaimResponse.addItem.detail.fee" status="deleted"/>
+      <element path="ClaimResponse.error.sequenceLinkId" status="deleted"/>
+      <element path="ClaimResponse.error.detailSequenceLinkId" status="deleted"/>
+      <element path="ClaimResponse.error.subdetailSequenceLinkId" status="deleted"/>
+      <element path="ClaimResponse.totalCost" status="deleted"/>
+      <element path="ClaimResponse.unallocDeductable" status="deleted"/>
+      <element path="ClaimResponse.totalBenefit" status="deleted"/>
+      <element path="ClaimResponse.reserved" status="deleted"/>
+      <element path="ClaimResponse.insurance.preAuthRef" status="deleted"/>
+   </type>
+</difference>

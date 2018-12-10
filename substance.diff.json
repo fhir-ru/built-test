@@ -1,0 +1,13 @@
+﻿{
+  "types": [
+    "Substance"
+  ],
+  "Substance": {
+    "elements": {
+      "Substance.status": {
+        "modifier": "added"
+      }
+    },
+    "status": "changed"
+  }
+}

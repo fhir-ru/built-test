@@ -1,0 +1,31 @@
+﻿{
+  "types": [
+    "CareTeam"
+  ],
+  "CareTeam": {
+    "elements": {
+      "CareTeam.encounter": {
+        "status": "new"
+      },
+      "CareTeam.participant.role": {
+        "old-max": "1",
+        "new-max": "*"
+      },
+      "CareTeam.participant.member": {
+        "removed-types": [
+          "Reference(Practitioner | RelatedPerson | Patient | Organization | CareTeam)"
+        ],
+        "added-types": [
+          "Reference(Practitioner | PractitionerRole | RelatedPerson | Patient | Organization | CareTeam)"
+        ]
+      },
+      "CareTeam.telecom": {
+        "status": "new"
+      },
+      "CareTeam.context": {
+        "status": "deleted"
+      }
+    },
+    "status": "changed"
+  }
+}

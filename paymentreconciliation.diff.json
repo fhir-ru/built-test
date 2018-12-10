@@ -1,0 +1,113 @@
+﻿{
+  "types": [
+    "PaymentReconciliation"
+  ],
+  "PaymentReconciliation": {
+    "elements": {
+      "PaymentReconciliation.status": {
+        "old-min": 0,
+        "new-min": 1
+      },
+      "PaymentReconciliation.created": {
+        "old-min": 0,
+        "new-min": 1
+      },
+      "PaymentReconciliation.paymentIssuer": {
+        "status": "new"
+      },
+      "PaymentReconciliation.request": {
+        "removed-types": [
+          "Reference(ProcessRequest)"
+        ],
+        "added-types": [
+          "Reference(Task)"
+        ]
+      },
+      "PaymentReconciliation.requestor": {
+        "status": "new"
+      },
+      "PaymentReconciliation.outcome": {
+        "removed-types": [
+          "CodeableConcept"
+        ],
+        "added-types": [
+          "code"
+        ],
+        "binding-codes-changed": true,
+        "added-codes": [
+          "queued"
+        ],
+        "binding-status": "changed",
+        "old-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/remittance-outcome",
+          "strength": "required"
+        },
+        "new-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/remittance-outcome",
+          "strength": "required"
+        }
+      },
+      "PaymentReconciliation.paymentDate": {
+        "status": "new"
+      },
+      "PaymentReconciliation.paymentAmount": {
+        "status": "new"
+      },
+      "PaymentReconciliation.paymentIdentifier": {
+        "status": "new"
+      },
+      "PaymentReconciliation.detail.identifier": {
+        "status": "new"
+      },
+      "PaymentReconciliation.detail.predecessor": {
+        "status": "new"
+      },
+      "PaymentReconciliation.detail.submitter": {
+        "removed-types": [
+          "Reference(Organization)"
+        ],
+        "added-types": [
+          "Reference(Practitioner | PractitionerRole | Organization)"
+        ]
+      },
+      "PaymentReconciliation.detail.responsible": {
+        "status": "new"
+      },
+      "PaymentReconciliation.detail.payee": {
+        "removed-types": [
+          "Reference(Organization)"
+        ],
+        "added-types": [
+          "Reference(Practitioner | PractitionerRole | Organization)"
+        ]
+      },
+      "PaymentReconciliation.formCode": {
+        "status": "new"
+      },
+      "PaymentReconciliation.processNote.type": {
+        "removed-types": [
+          "CodeableConcept"
+        ],
+        "added-types": [
+          "code"
+        ]
+      },
+      "PaymentReconciliation.organization": {
+        "status": "deleted"
+      },
+      "PaymentReconciliation.requestProvider": {
+        "status": "deleted"
+      },
+      "PaymentReconciliation.requestOrganization": {
+        "status": "deleted"
+      },
+      "PaymentReconciliation.form": {
+        "status": "deleted"
+      },
+      "PaymentReconciliation.total": {
+        "status": "deleted"
+      }
+    },
+    "status": "changed"
+  }
+}

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<difference>
+   <type name="PaymentReconciliation" status="changed">
+      <element new-min="1" old-min="0" path="PaymentReconciliation.status"/>
+      <element new-min="1" old-min="0" path="PaymentReconciliation.created"/>
+      <element path="PaymentReconciliation.paymentIssuer" status="new"/>
+      <element path="PaymentReconciliation.request">
+         <removed-type name="Reference(ProcessRequest)"/>
+         <added-type name="Reference(Task)"/>
+      </element>
+      <element path="PaymentReconciliation.requestor" status="new"/>
+      <element binding-codes-changed="true"
+               binding-status="changed"
+               path="PaymentReconciliation.outcome">
+         <removed-type name="CodeableConcept"/>
+         <added-type name="code"/>
+         <added-code code="queued"/>
+         <old-binding reference="http://hl7.org/fhir/ValueSet/remittance-outcome"
+                      strength="required"/>
+         <new-binding reference="http://hl7.org/fhir/ValueSet/remittance-outcome"
+                      strength="required"/>
+      </element>
+      <element path="PaymentReconciliation.paymentDate" status="new"/>
+      <element path="PaymentReconciliation.paymentAmount" status="new"/>
+      <element path="PaymentReconciliation.paymentIdentifier" status="new"/>
+      <element path="PaymentReconciliation.detail.identifier" status="new"/>
+      <element path="PaymentReconciliation.detail.predecessor" status="new"/>
+      <element path="PaymentReconciliation.detail.submitter">
+         <removed-type name="Reference(Organization)"/>
+         <added-type name="Reference(Practitioner | PractitionerRole | Organization)"/>
+      </element>
+      <element path="PaymentReconciliation.detail.responsible" status="new"/>
+      <element path="PaymentReconciliation.detail.payee">
+         <removed-type name="Reference(Organization)"/>
+         <added-type name="Reference(Practitioner | PractitionerRole | Organization)"/>
+      </element>
+      <element path="PaymentReconciliation.formCode" status="new"/>
+      <element path="PaymentReconciliation.processNote.type">
+         <removed-type name="CodeableConcept"/>
+         <added-type name="code"/>
+      </element>
+      <element path="PaymentReconciliation.organization" status="deleted"/>
+      <element path="PaymentReconciliation.requestProvider" status="deleted"/>
+      <element path="PaymentReconciliation.requestOrganization" status="deleted"/>
+      <element path="PaymentReconciliation.form" status="deleted"/>
+      <element path="PaymentReconciliation.total" status="deleted"/>
+   </type>
+</difference>

@@ -1,0 +1,181 @@
+﻿{
+  "types": [
+    "MessageDefinition"
+  ],
+  "MessageDefinition": {
+    "elements": {
+      "MessageDefinition.identifier": {
+        "old-max": "1",
+        "new-max": "*"
+      },
+      "MessageDefinition.replaces": {
+        "removed-types": [
+          "Reference(MessageDefinition)"
+        ],
+        "added-types": [
+          "canonical(MessageDefinition)"
+        ]
+      },
+      "MessageDefinition.experimental": {
+        "modifier": "removed"
+      },
+      "MessageDefinition.base": {
+        "removed-types": [
+          "Reference(MessageDefinition)"
+        ],
+        "added-types": [
+          "canonical(MessageDefinition)"
+        ]
+      },
+      "MessageDefinition.parent": {
+        "removed-types": [
+          "Reference(ActivityDefinition | PlanDefinition)"
+        ],
+        "added-types": [
+          "canonical(ActivityDefinition | PlanDefinition)"
+        ]
+      },
+      "MessageDefinition.event[x]": {
+        "old-name": "event",
+        "added-types": [
+          "uri"
+        ]
+      },
+      "MessageDefinition.category": {
+        "binding-codes-changed": true,
+        "removed-codes": [
+          "Consequence",
+          "Currency",
+          "Notification"
+        ],
+        "added-codes": [
+          "consequence",
+          "currency",
+          "notification"
+        ],
+        "binding-status": "changed",
+        "old-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/message-significance-category",
+          "strength": "required"
+        },
+        "new-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/message-significance-category",
+          "strength": "required"
+        }
+      },
+      "MessageDefinition.focus.code": {
+        "binding-codes-changed": true,
+        "removed-codes": [
+          "BodySite",
+          "DataElement",
+          "DeviceComponent",
+          "EligibilityRequest",
+          "EligibilityResponse",
+          "ExpansionProfile",
+          "ImagingManifest",
+          "ProcedureRequest",
+          "ProcessRequest",
+          "ProcessResponse",
+          "ReferralRequest",
+          "Sequence",
+          "ServiceDefinition"
+        ],
+        "added-codes": [
+          "BiologicallyDerivedProduct",
+          "BodyStructure",
+          "CatalogEntry",
+          "ChargeItemDefinition",
+          "CoverageEligibilityRequest",
+          "CoverageEligibilityResponse",
+          "DeviceDefinition",
+          "EffectEvidenceSynthesis",
+          "EventDefinition",
+          "Evidence",
+          "EvidenceVariable",
+          "ExampleScenario",
+          "ImmunizationEvaluation",
+          "InsurancePlan",
+          "Invoice",
+          "ItemInstance",
+          "MedicationKnowledge",
+          "MedicinalProduct",
+          "MedicinalProductAuthorization",
+          "MedicinalProductContraindication",
+          "MedicinalProductIndication",
+          "MedicinalProductIngredient",
+          "MedicinalProductInteraction",
+          "MedicinalProductManufactured",
+          "MedicinalProductPackaged",
+          "MedicinalProductPharmaceutical",
+          "MedicinalProductUndesirableEffect",
+          "MolecularSequence",
+          "ObservationDefinition",
+          "OrganizationAffiliation",
+          "ResearchDefinition",
+          "ResearchElementDefinition",
+          "RiskEvidenceSynthesis",
+          "ServiceRequest",
+          "SpecimenDefinition",
+          "SubstanceNucleicAcid",
+          "SubstancePolymer",
+          "SubstanceProtein",
+          "SubstanceReferenceInformation",
+          "SubstanceSourceMaterial",
+          "SubstanceSpecification",
+          "TerminologyCapabilities",
+          "VerificationResult"
+        ],
+        "binding-status": "changed",
+        "old-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/resource-types",
+          "strength": "required"
+        },
+        "new-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/resource-types",
+          "strength": "required"
+        }
+      },
+      "MessageDefinition.focus.profile": {
+        "removed-types": [
+          "Reference(StructureDefinition)"
+        ],
+        "added-types": [
+          "canonical(StructureDefinition)"
+        ]
+      },
+      "MessageDefinition.focus.min": {
+        "old-min": 0,
+        "new-min": 1,
+        "default": "removed",
+        "old-default": "\"0\""
+      },
+      "MessageDefinition.responseRequired": {
+        "removed-types": [
+          "boolean"
+        ],
+        "added-types": [
+          "code"
+        ],
+        "binding-status": "added",
+        "new-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/messageheader-response-request",
+          "strength": "required"
+        },
+        "default": "removed",
+        "old-default": "\"false\""
+      },
+      "MessageDefinition.allowedResponse.message": {
+        "removed-types": [
+          "Reference(MessageDefinition)"
+        ],
+        "added-types": [
+          "canonical(MessageDefinition)"
+        ]
+      },
+      "MessageDefinition.graph": {
+        "status": "new"
+      }
+    },
+    "status": "changed"
+  }
+}

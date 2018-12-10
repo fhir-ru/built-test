@@ -1,0 +1,49 @@
+﻿{
+  "types": [
+    "GuidanceResponse"
+  ],
+  "GuidanceResponse": {
+    "elements": {
+      "GuidanceResponse.requestIdentifier": {
+        "old-name": "requestId",
+        "removed-types": [
+          "id"
+        ],
+        "added-types": [
+          "Identifier"
+        ]
+      },
+      "GuidanceResponse.identifier": {
+        "old-max": "1",
+        "new-max": "*"
+      },
+      "GuidanceResponse.module[x]": {
+        "old-name": "module",
+        "removed-types": [
+          "Reference(ServiceDefinition)"
+        ],
+        "added-types": [
+          "uri",
+          "canonical",
+          "CodeableConcept"
+        ]
+      },
+      "GuidanceResponse.encounter": {
+        "status": "new"
+      },
+      "GuidanceResponse.reasonCode": {
+        "status": "new"
+      },
+      "GuidanceResponse.reasonReference": {
+        "status": "new"
+      },
+      "GuidanceResponse.context": {
+        "status": "deleted"
+      },
+      "GuidanceResponse.reason[x]": {
+        "status": "deleted"
+      }
+    },
+    "status": "changed"
+  }
+}

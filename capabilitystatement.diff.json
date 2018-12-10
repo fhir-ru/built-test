@@ -1,0 +1,298 @@
+﻿{
+  "types": [
+    "CapabilityStatement"
+  ],
+  "CapabilityStatement": {
+    "elements": {
+      "CapabilityStatement": {
+        "old-min": 1,
+        "new-min": 0,
+        "old-max": "1",
+        "new-max": "*"
+      },
+      "CapabilityStatement.experimental": {
+        "modifier": "removed"
+      },
+      "CapabilityStatement.instantiates": {
+        "removed-types": [
+          "uri"
+        ],
+        "added-types": [
+          "canonical(CapabilityStatement)"
+        ]
+      },
+      "CapabilityStatement.imports": {
+        "status": "new"
+      },
+      "CapabilityStatement.implementation.url": {
+        "removed-types": [
+          "uri"
+        ],
+        "added-types": [
+          "url"
+        ]
+      },
+      "CapabilityStatement.implementation.custodian": {
+        "status": "new"
+      },
+      "CapabilityStatement.fhirVersion": {
+        "removed-types": [
+          "id"
+        ],
+        "added-types": [
+          "code"
+        ],
+        "binding-status": "added",
+        "new-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/FHIR-version",
+          "strength": "required"
+        }
+      },
+      "CapabilityStatement.implementationGuide": {
+        "removed-types": [
+          "uri"
+        ],
+        "added-types": [
+          "canonical(ImplementationGuide)"
+        ]
+      },
+      "CapabilityStatement.rest.documentation": {
+        "removed-types": [
+          "string"
+        ],
+        "added-types": [
+          "markdown"
+        ]
+      },
+      "CapabilityStatement.rest.security.description": {
+        "removed-types": [
+          "string"
+        ],
+        "added-types": [
+          "markdown"
+        ]
+      },
+      "CapabilityStatement.rest.resource.type": {
+        "binding-codes-changed": true,
+        "removed-codes": [
+          "BodySite",
+          "DataElement",
+          "DeviceComponent",
+          "EligibilityRequest",
+          "EligibilityResponse",
+          "ExpansionProfile",
+          "ImagingManifest",
+          "ProcedureRequest",
+          "ProcessRequest",
+          "ProcessResponse",
+          "ReferralRequest",
+          "Sequence",
+          "ServiceDefinition"
+        ],
+        "added-codes": [
+          "BiologicallyDerivedProduct",
+          "BodyStructure",
+          "CatalogEntry",
+          "ChargeItemDefinition",
+          "CoverageEligibilityRequest",
+          "CoverageEligibilityResponse",
+          "DeviceDefinition",
+          "EffectEvidenceSynthesis",
+          "EventDefinition",
+          "Evidence",
+          "EvidenceVariable",
+          "ExampleScenario",
+          "ImmunizationEvaluation",
+          "InsurancePlan",
+          "Invoice",
+          "ItemInstance",
+          "MedicationKnowledge",
+          "MedicinalProduct",
+          "MedicinalProductAuthorization",
+          "MedicinalProductContraindication",
+          "MedicinalProductIndication",
+          "MedicinalProductIngredient",
+          "MedicinalProductInteraction",
+          "MedicinalProductManufactured",
+          "MedicinalProductPackaged",
+          "MedicinalProductPharmaceutical",
+          "MedicinalProductUndesirableEffect",
+          "MolecularSequence",
+          "ObservationDefinition",
+          "OrganizationAffiliation",
+          "ResearchDefinition",
+          "ResearchElementDefinition",
+          "RiskEvidenceSynthesis",
+          "ServiceRequest",
+          "SpecimenDefinition",
+          "SubstanceNucleicAcid",
+          "SubstancePolymer",
+          "SubstanceProtein",
+          "SubstanceReferenceInformation",
+          "SubstanceSourceMaterial",
+          "SubstanceSpecification",
+          "TerminologyCapabilities",
+          "VerificationResult"
+        ],
+        "binding-status": "changed",
+        "old-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/resource-types",
+          "strength": "required"
+        },
+        "new-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/resource-types",
+          "strength": "required"
+        }
+      },
+      "CapabilityStatement.rest.resource.profile": {
+        "removed-types": [
+          "Reference(StructureDefinition)"
+        ],
+        "added-types": [
+          "canonical(StructureDefinition)"
+        ]
+      },
+      "CapabilityStatement.rest.resource.supportedProfile": {
+        "old-name": "profile",
+        "removed-types": [
+          "Reference(StructureDefinition)"
+        ],
+        "added-types": [
+          "canonical(StructureDefinition)"
+        ]
+      },
+      "CapabilityStatement.rest.resource.interaction": {
+        "old-min": 1,
+        "new-min": 0
+      },
+      "CapabilityStatement.rest.resource.interaction.documentation": {
+        "removed-types": [
+          "string"
+        ],
+        "added-types": [
+          "markdown"
+        ]
+      },
+      "CapabilityStatement.rest.resource.searchParam.definition": {
+        "removed-types": [
+          "uri"
+        ],
+        "added-types": [
+          "canonical(SearchParameter)"
+        ]
+      },
+      "CapabilityStatement.rest.resource.searchParam.type": {
+        "binding-codes-changed": true,
+        "added-codes": [
+          "special"
+        ],
+        "binding-status": "changed",
+        "old-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/search-param-type",
+          "strength": "required"
+        },
+        "new-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/search-param-type",
+          "strength": "required"
+        }
+      },
+      "CapabilityStatement.rest.resource.searchParam.documentation": {
+        "removed-types": [
+          "string"
+        ],
+        "added-types": [
+          "markdown"
+        ]
+      },
+      "CapabilityStatement.rest.resource.operation": {
+        "status": "new"
+      },
+      "CapabilityStatement.rest.resource.operation.name": {
+        "status": "new"
+      },
+      "CapabilityStatement.rest.resource.operation.definition": {
+        "status": "new"
+      },
+      "CapabilityStatement.rest.resource.operation.documentation": {
+        "status": "new"
+      },
+      "CapabilityStatement.rest.interaction.documentation": {
+        "removed-types": [
+          "string"
+        ],
+        "added-types": [
+          "markdown"
+        ]
+      },
+      "CapabilityStatement.rest.operation": {
+        "removed-types": [
+          "BackboneElement"
+        ]
+      },
+      "CapabilityStatement.rest.compartment": {
+        "removed-types": [
+          "uri"
+        ],
+        "added-types": [
+          "canonical(CompartmentDefinition)"
+        ]
+      },
+      "CapabilityStatement.messaging.endpoint.address": {
+        "removed-types": [
+          "uri"
+        ],
+        "added-types": [
+          "url"
+        ]
+      },
+      "CapabilityStatement.messaging.documentation": {
+        "removed-types": [
+          "string"
+        ],
+        "added-types": [
+          "markdown"
+        ]
+      },
+      "CapabilityStatement.messaging.supportedMessage.definition": {
+        "removed-types": [
+          "Reference(MessageDefinition)"
+        ],
+        "added-types": [
+          "canonical(MessageDefinition)"
+        ]
+      },
+      "CapabilityStatement.document.documentation": {
+        "removed-types": [
+          "string"
+        ],
+        "added-types": [
+          "markdown"
+        ]
+      },
+      "CapabilityStatement.document.profile": {
+        "removed-types": [
+          "Reference(StructureDefinition)"
+        ],
+        "added-types": [
+          "canonical(StructureDefinition)"
+        ]
+      },
+      "CapabilityStatement.acceptUnknown": {
+        "status": "deleted"
+      },
+      "CapabilityStatement.rest.security.certificate": {
+        "status": "deleted"
+      },
+      "CapabilityStatement.rest.operation.name": {
+        "status": "deleted"
+      },
+      "CapabilityStatement.rest.operation.definition": {
+        "status": "deleted"
+      },
+      "CapabilityStatement.messaging.event": {
+        "status": "deleted"
+      }
+    },
+    "status": "changed"
+  }
+}

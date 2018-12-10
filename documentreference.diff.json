@@ -1,0 +1,63 @@
+﻿{
+  "types": [
+    "DocumentReference"
+  ],
+  "DocumentReference": {
+    "elements": {
+      "DocumentReference.type": {
+        "old-min": 1,
+        "new-min": 0
+      },
+      "DocumentReference.category": {
+        "old-name": "class",
+        "old-max": "1",
+        "new-max": "*"
+      },
+      "DocumentReference.date": {
+        "status": "new"
+      },
+      "DocumentReference.author": {
+        "removed-types": [
+          "Reference(Practitioner | Organization | Device | Patient | RelatedPerson)"
+        ],
+        "added-types": [
+          "Reference(Practitioner | PractitionerRole | Organization | Device | Patient | RelatedPerson)"
+        ]
+      },
+      "DocumentReference.relatesTo": {
+        "modifier": "removed"
+      },
+      "DocumentReference.context.encounter": {
+        "old-max": "1",
+        "new-max": "*",
+        "removed-types": [
+          "Reference(Encounter)"
+        ],
+        "added-types": [
+          "Reference(Encounter | EpisodeOfCare)"
+        ]
+      },
+      "DocumentReference.context.related": {
+        "removed-types": [
+          "BackboneElement"
+        ],
+        "added-types": [
+          "Reference(Resource)"
+        ]
+      },
+      "DocumentReference.created": {
+        "status": "deleted"
+      },
+      "DocumentReference.indexed": {
+        "status": "deleted"
+      },
+      "DocumentReference.context.related.identifier": {
+        "status": "deleted"
+      },
+      "DocumentReference.context.related.ref": {
+        "status": "deleted"
+      }
+    },
+    "status": "changed"
+  }
+}

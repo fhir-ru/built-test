@@ -1,0 +1,37 @@
+﻿{
+  "types": [
+    "DocumentManifest"
+  ],
+  "DocumentManifest": {
+    "elements": {
+      "DocumentManifest.author": {
+        "removed-types": [
+          "Reference(Practitioner | Organization | Device | Patient | RelatedPerson)"
+        ],
+        "added-types": [
+          "Reference(Practitioner | PractitionerRole | Organization | Device | Patient | RelatedPerson)"
+        ]
+      },
+      "DocumentManifest.recipient": {
+        "removed-types": [
+          "Reference(Patient | Practitioner | RelatedPerson | Organization)"
+        ],
+        "added-types": [
+          "Reference(Patient | Practitioner | PractitionerRole | RelatedPerson | Organization)"
+        ]
+      },
+      "DocumentManifest.content": {
+        "removed-types": [
+          "BackboneElement"
+        ],
+        "added-types": [
+          "Reference(Resource)"
+        ]
+      },
+      "DocumentManifest.content.p[x]": {
+        "status": "deleted"
+      }
+    },
+    "status": "changed"
+  }
+}

@@ -1,0 +1,155 @@
+﻿{
+  "types": [
+    "Questionnaire"
+  ],
+  "Questionnaire": {
+    "elements": {
+      "Questionnaire.derivedFrom": {
+        "status": "new"
+      },
+      "Questionnaire.experimental": {
+        "modifier": "removed"
+      },
+      "Questionnaire.subjectType": {
+        "binding-codes-changed": true,
+        "removed-codes": [
+          "BodySite",
+          "DataElement",
+          "DeviceComponent",
+          "EligibilityRequest",
+          "EligibilityResponse",
+          "ExpansionProfile",
+          "ImagingManifest",
+          "ProcedureRequest",
+          "ProcessRequest",
+          "ProcessResponse",
+          "ReferralRequest",
+          "Sequence",
+          "ServiceDefinition"
+        ],
+        "added-codes": [
+          "BiologicallyDerivedProduct",
+          "BodyStructure",
+          "CatalogEntry",
+          "ChargeItemDefinition",
+          "CoverageEligibilityRequest",
+          "CoverageEligibilityResponse",
+          "DeviceDefinition",
+          "EffectEvidenceSynthesis",
+          "EventDefinition",
+          "Evidence",
+          "EvidenceVariable",
+          "ExampleScenario",
+          "ImmunizationEvaluation",
+          "InsurancePlan",
+          "Invoice",
+          "ItemInstance",
+          "MedicationKnowledge",
+          "MedicinalProduct",
+          "MedicinalProductAuthorization",
+          "MedicinalProductContraindication",
+          "MedicinalProductIndication",
+          "MedicinalProductIngredient",
+          "MedicinalProductInteraction",
+          "MedicinalProductManufactured",
+          "MedicinalProductPackaged",
+          "MedicinalProductPharmaceutical",
+          "MedicinalProductUndesirableEffect",
+          "MolecularSequence",
+          "ObservationDefinition",
+          "OrganizationAffiliation",
+          "ResearchDefinition",
+          "ResearchElementDefinition",
+          "RiskEvidenceSynthesis",
+          "ServiceRequest",
+          "SpecimenDefinition",
+          "SubstanceNucleicAcid",
+          "SubstancePolymer",
+          "SubstanceProtein",
+          "SubstanceReferenceInformation",
+          "SubstanceSourceMaterial",
+          "SubstanceSpecification",
+          "TerminologyCapabilities",
+          "VerificationResult"
+        ],
+        "binding-status": "changed",
+        "old-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/resource-types",
+          "strength": "required"
+        },
+        "new-binding": {
+          "reference": "http://hl7.org/fhir/ValueSet/resource-types",
+          "strength": "required"
+        }
+      },
+      "Questionnaire.item.enableWhen.operator": {
+        "status": "new"
+      },
+      "Questionnaire.item.enableWhen.answer[x]": {
+        "old-min": 0,
+        "new-min": 1,
+        "removed-types": [
+          "uri",
+          "Attachment"
+        ]
+      },
+      "Questionnaire.item.enableBehavior": {
+        "status": "new"
+      },
+      "Questionnaire.item.required": {
+        "default": "removed",
+        "old-default": "\"false\""
+      },
+      "Questionnaire.item.repeats": {
+        "default": "removed",
+        "old-default": "\"false\""
+      },
+      "Questionnaire.item.answerValueSet": {
+        "old-name": "options",
+        "removed-types": [
+          "Reference(ValueSet)"
+        ],
+        "added-types": [
+          "canonical(ValueSet)"
+        ]
+      },
+      "Questionnaire.item.answerOption": {
+        "old-name": "option"
+      },
+      "Questionnaire.item.answerOption.value[x]": {
+        "added-types": [
+          "Reference(Resource)"
+        ]
+      },
+      "Questionnaire.item.answerOption.initialSelected": {
+        "status": "new"
+      },
+      "Questionnaire.item.initial": {
+        "old-name": "initial[x]",
+        "old-max": "1",
+        "new-max": "*",
+        "removed-types": [
+          "boolean",
+          "decimal",
+          "integer",
+          "date",
+          "dateTime",
+          "time",
+          "string",
+          "uri",
+          "Attachment",
+          "Coding",
+          "Quantity",
+          "Reference(Resource)"
+        ]
+      },
+      "Questionnaire.item.initial.value[x]": {
+        "status": "new"
+      },
+      "Questionnaire.item.enableWhen.hasAnswer": {
+        "status": "deleted"
+      }
+    },
+    "status": "changed"
+  }
+}
